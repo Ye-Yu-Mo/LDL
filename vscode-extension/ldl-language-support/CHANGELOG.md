@@ -2,8 +2,39 @@
 
 All notable changes to the "ldl-language-support" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [1.1.0] - 2024-09-25
 
-## [Unreleased]
+### Added
+- Cross-file definition navigation and jumping
+- Enhanced project structure with bilingual documentation
+- Updated repository URLs to official GitHub location
+- Improved documentation with Chinese-English dual language support
 
-- Initial release
+### Fixed
+- Cross-file symbol resolution now working properly
+- Enhanced file parsing performance with caching
+- Better error handling for large workspaces
+
+### Changed
+- Repository moved to https://github.com/Ye-Yu-Mo/LDL
+- Author information updated
+- Documentation structure reorganized
+
+## [1.0.1] - 2024-09-24
+
+### Fixed
+- Display name conflict resolution for VS Code Marketplace
+- File naming conflicts with Chinese documentation files
+
+## [1.0.0] - 2024-09-24
+
+### Added
+- Initial release with comprehensive LDL language support
+- Syntax highlighting for .ldl files
+- Intelligent code completion with AI enhancement
+- Variable name completion and suggestions
+- Real-time error detection and fixing
+- Document symbol navigation
+- Workspace symbol search
+- Label-based symbol organization
+- AI-powered code generation

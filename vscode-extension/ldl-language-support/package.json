@@ -2,20 +2,20 @@
   "name": "ldl-language-support",
   "displayName": "LDL Learning Domain Language",
   "description": "Intelligent language support for LDL (Learning Domain Language) with AI-powered completion, error detection, and code generation",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "publisher": "jasxu",
   "author": {
-    "name": "LDL Team",
-    "email": "dev@ldl-lang.org"
+    "name": "Ye-Yu-Mo",
+    "email": "contact@ye-yu-mo.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/ldl-lang/ldl",
+  "homepage": "https://github.com/Ye-Yu-Mo/LDL",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ldl-lang/ldl.git"
+    "url": "https://github.com/Ye-Yu-Mo/LDL.git"
   },
   "bugs": {
-    "url": "https://github.com/ldl-lang/ldl/issues"
+    "url": "https://github.com/Ye-Yu-Mo/LDL/issues"
   },
   "keywords": [
     "ldl",
