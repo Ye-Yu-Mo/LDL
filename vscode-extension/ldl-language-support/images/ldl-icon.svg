@@ -1,0 +1,23 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="64" fill="#0066CC"/>
+
+  <!-- LDL Letters -->
+  <text x="64" y="45" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">LDL</text>
+
+  <!-- Learning symbol - brain/lightbulb hybrid -->
+  <circle cx="45" cy="75" r="8" fill="none" stroke="white" stroke-width="2"/>
+  <path d="M37 75 Q45 67 53 75" fill="none" stroke="white" stroke-width="2"/>
+  <path d="M41 71 Q45 67 49 71" fill="none" stroke="white" stroke-width="2"/>
+
+  <!-- Domain symbol - connected nodes -->
+  <circle cx="64" cy="85" r="4" fill="white"/>
+  <circle cx="75" cy="75" r="3" fill="white"/>
+  <circle cx="85" cy="85" r="3" fill="white"/>
+  <line x1="64" y1="85" x2="75" y2="75" stroke="white" stroke-width="2"/>
+  <line x1="75" y1="75" x2="85" y2="85" stroke="white" stroke-width="2"/>
+
+  <!-- Language symbol - code brackets -->
+  <path d="M25 60 L20 64 L25 68" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M103 60 L108 64 L103 68" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>

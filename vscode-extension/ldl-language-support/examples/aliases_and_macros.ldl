@@ -1,0 +1,168 @@
+/// 马克思主义方法论 - 类型别名、宏定义和常量测试文件
+
+// ========== 马克思主义方法论类型别名定义 ==========
+using MaterialConditions = Steps
+using SocialForces = str  
+using HistoricalPeriod = int
+using ClassStruggleIntensity = float
+using ConsciousnessLevel = int
+using ProductionRelations = Steps
+using DialecticalAnalysis = Steps
+
+// ========== 马克思主义分析宏定义 ==========
+macro CONTRADICTION_ANALYSIS_LEVELS 3
+macro CLASS_STRUGGLE_PHASES 4
+macro HISTORICAL_MATERIALISM_DEPTH 5
+macro DIALECTICAL_SYNTHESIS_CYCLES 2
+macro PRACTICE_THEORY_ITERATIONS 3
+
+// ========== 马克思主义理论常量定义 ==========
+const MATERIAL_DETERMINES_CONSCIOUSNESS = 1
+const CONSCIOUSNESS_REACTS_ON_MATERIAL = 2
+const QUANTITATIVE_TO_QUALITATIVE_THRESHOLD = 100
+const NEGATION_OF_NEGATION_STAGES = 3
+const CLASS_STRUGGLE_MOTOR_PRIORITY = 1
+const PRODUCTIVE_FORCES_BASE_LEVEL = 1
+
+/// 使用马克思主义类型别名的历史分析函数
+fn analyze_historical_development(
+    social_force: SocialForces, 
+    period: HistoricalPeriod, 
+    consciousness: ConsciousnessLevel
+) -> MaterialConditions {
+    let conditions: MaterialConditions = []
+    let analysis_depth = HISTORICAL_MATERIALISM_DEPTH  // 使用宏
+    let material_priority = MATERIAL_DETERMINES_CONSCIOUSNESS  // 使用常量
+    
+    if consciousness > CONSCIOUSNESS_REACTS_ON_MATERIAL {  // 使用常量
+        analysis_depth = DIALECTICAL_SYNTHESIS_CYCLES
+    }
+    
+    return conditions
+}
+
+/// 使用各种马克思主义别名和宏的复杂分析系统
+fn advanced_dialectical_system(
+    social_force: SocialForces, 
+    struggle_intensity: ClassStruggleIntensity,
+    historical_span: HistoricalPeriod
+) -> DialecticalAnalysis {
+    
+    // 使用马克思主义宏定义的值
+    let contradiction_levels = CONTRADICTION_ANALYSIS_LEVELS
+    let struggle_phases = CLASS_STRUGGLE_PHASES  
+    let materialism_depth = HISTORICAL_MATERIALISM_DEPTH
+    let synthesis_cycles = DIALECTICAL_SYNTHESIS_CYCLES
+    
+    // 使用马克思主义理论常量
+    let material_base = MATERIAL_DETERMINES_CONSCIOUSNESS
+    let consciousness_reaction = CONSCIOUSNESS_REACTS_ON_MATERIAL
+    let qualitative_threshold = QUANTITATIVE_TO_QUALITATIVE_THRESHOLD
+    
+    // 检查阶级斗争强度阈值
+    if struggle_intensity < CLASS_STRUGGLE_MOTOR_PRIORITY {
+        // 调整分析策略
+        contradiction_levels = DIALECTICAL_SYNTHESIS_CYCLES
+    }
+    
+    let result_analysis: DialecticalAnalysis = [
+        "分析物质条件",
+        "考察生产关系", 
+        "研究阶级斗争",
+        "把握历史规律",
+        "指导革命实践"
+    ]
+    
+    return result_analysis
+}
+
+/// 马克思主义综合分析 Pipeline
+pipeline comprehensive_marxist_analysis {
+    // 调用使用马克思主义类型别名的函数
+    let historical_analysis = analyze_historical_development(
+        social_force="工人阶级",     // SocialForces 类型
+        period=QUANTITATIVE_TO_QUALITATIVE_THRESHOLD,  // 使用常量
+        consciousness=2                   // ConsciousnessLevel 类型
+    )
+    
+    let dialectical_system = advanced_dialectical_system(
+        social_force="资产阶级",                    // SocialForces
+        struggle_intensity=CLASS_STRUGGLE_MOTOR_PRIORITY,  // 使用常量
+        historical_span=HISTORICAL_MATERIALISM_DEPTH         // 使用宏
+    )
+}
+
+/// 评估马克思主义分析方法效果的函数
+fn evaluate_marxist_analysis_effectiveness(
+    social_force: SocialForces,
+    actual_depth: HistoricalPeriod, 
+    target_depth: HistoricalPeriod,
+    consciousness_level: ConsciousnessLevel
+) -> ClassStruggleIntensity {
+    
+    let base_effectiveness: ClassStruggleIntensity = 3.0
+    let depth_bonus = 0.0
+    let consciousness_multiplier = 1.0
+    
+    // 使用马克思主义常量进行比较
+    if actual_depth >= QUANTITATIVE_TO_QUALITATIVE_THRESHOLD {
+        depth_bonus = 2.0
+    }
+    
+    if actual_depth >= target_depth {
+        depth_bonus += 1.0  
+    }
+    
+    // 使用马克思主义宏定义的分析标准
+    let final_effectiveness = base_effectiveness + depth_bonus + consciousness_multiplier
+    if final_effectiveness < CLASS_STRUGGLE_MOTOR_PRIORITY {
+        final_effectiveness = MATERIAL_DETERMINES_CONSCIOUSNESS
+    }
+    
+    return final_effectiveness
+}
+
+/// 马克思主义类型别名链式定义测试
+using RevolutionaryForce = SocialForces      // 别名的别名
+using HistoricalStage = HistoricalPeriod    // 别名的别名  
+using ClassConsciousness = ConsciousnessLevel       // 别名的别名
+
+fn quick_class_analysis(
+    force: RevolutionaryForce, 
+    stage: HistoricalStage, 
+    consciousness: ClassConsciousness
+) -> bool {
+    let is_revolutionary = false
+    
+    // 混合使用马克思主义原始类型、别名、宏和常量
+    if stage >= HISTORICAL_MATERIALISM_DEPTH && consciousness >= MATERIAL_DETERMINES_CONSCIOUSNESS {
+        is_revolutionary = true
+    }
+    
+    return is_revolutionary
+}
+
+/// 测试马克思主义方法论符号跳转功能的使用示例
+fn test_marxist_symbol_jumping() {
+    // 点击这些应该能跳转到对应的马克思主义理论定义:
+    
+    // 马克思主义类型别名跳转测试
+    let force: SocialForces = "无产阶级"           // 应跳转到 using SocialForces = str
+    let conditions: MaterialConditions = []       // 应跳转到 using MaterialConditions = Steps
+    let period: HistoricalPeriod = 200            // 应跳转到 using HistoricalPeriod = int
+    
+    // 马克思主义宏跳转测试  
+    let analysis_levels = CONTRADICTION_ANALYSIS_LEVELS      // 应跳转到宏定义
+    let struggle_phases = CLASS_STRUGGLE_PHASES              // 应跳转到宏定义
+    let materialism_depth = HISTORICAL_MATERIALISM_DEPTH     // 应跳转到宏定义
+    
+    // 马克思主义常量跳转测试
+    let material_priority = MATERIAL_DETERMINES_CONSCIOUSNESS     // 应跳转到常量定义
+    let consciousness_reaction = CONSCIOUSNESS_REACTS_ON_MATERIAL // 应跳转到常量定义
+    let qualitative_change = QUANTITATIVE_TO_QUALITATIVE_THRESHOLD // 应跳转到常量定义
+    
+    // 马克思主义函数调用跳转测试（原有功能增强）
+    let historical = analyze_historical_development("工人阶级", 150, 3)    // 应跳转到函数定义
+    let class_result = quick_class_analysis("革命力量", 200, 2)    // 应跳转到函数定义
+    let dialectical = advanced_dialectical_system("资产阶级", 4.5, 100)  // 应跳转到函数定义
+}

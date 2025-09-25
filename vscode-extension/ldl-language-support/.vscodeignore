@@ -1,0 +1,15 @@
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+vsc-extension-quickstart.md
+**/tsconfig.json
+**/*.map
+**/*.ts
+node_modules/**
+*.vsix
+**/.DS_Store
+LDL关键字参考.md
+LDL变量类型参考.md
+使用文档.md
+开发文档.md

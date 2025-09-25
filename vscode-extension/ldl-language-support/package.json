@@ -1,0 +1,83 @@
+{
+  "name": "ldl-language-support",
+  "displayName": "LDL Learning Domain Language",
+  "description": "Intelligent language support for LDL (Learning Domain Language) with AI-powered completion, error detection, and code generation",
+  "version": "1.0.1",
+  "publisher": "jasxu",
+  "author": {
+    "name": "LDL Team",
+    "email": "dev@ldl-lang.org"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ldl-lang/ldl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ldl-lang/ldl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ldl-lang/ldl/issues"
+  },
+  "keywords": [
+    "ldl",
+    "learning",
+    "methodology",
+    "dsl",
+    "education",
+    "knowledge-management",
+    "ai-completion"
+  ],
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Education",
+    "Other"
+  ],
+  "galleryBanner": {
+    "color": "#0066CC",
+    "theme": "dark"
+  },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:ldl"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ldl",
+      "aliases": ["LDL", "ldl"],
+      "extensions": [".ldl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ldl",
+      "scopeName": "source.ldl",
+      "path": "./syntaxes/ldl.tmLanguage.json"
+    }],
+    "commands": [
+      {
+        "command": "ldl.showDocumentation",
+        "title": "Show LDL Documentation",
+        "category": "LDL"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "ldl.showDocumentation",
+          "when": "resourceExtname == .ldl"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.x",
+    "@types/vscode": "^1.60.0",
+    "typescript": "^4.4.4"
+  }
+}

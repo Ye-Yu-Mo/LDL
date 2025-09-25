@@ -1,0 +1,404 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "LDL",
+    "scopeName": "source.ldl",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#decorators"
+        },
+        {
+            "include": "#classes"
+        },
+        {
+            "include": "#type_aliases"
+        },
+        {
+            "include": "#macros"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#function_calls"
+        },
+        {
+            "include": "#arrays"
+        },
+        {
+            "include": "#variables"
+        },
+        {
+            "include": "#numbers"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.block.ldl",
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "patterns": [
+                        {
+                            "name": "keyword.other.documentation.ldl",
+                            "match": "@\\w+"
+                        }
+                    ]
+                },
+                {
+                    "name": "comment.line.documentation.ldl",
+                    "match": "///.*$"
+                },
+                {
+                    "name": "comment.line.double-slash.ldl",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.line.hash.ldl",
+                    "match": "#.*$"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.assignment.ldl",
+                    "match": "="
+                },
+                {
+                    "name": "keyword.operator.comparison.ldl",
+                    "match": "(==|!=|<=|>=|<|>)"
+                },
+                {
+                    "name": "keyword.operator.logical.ldl",
+                    "match": "(&&|\\|\\||!)"
+                },
+                {
+                    "name": "keyword.operator.arithmetic.ldl",
+                    "match": "(\\+|\\-|\\*|\\/|%)"
+                },
+                {
+                    "name": "keyword.operator.arrow.ldl",
+                    "match": "->"
+                },
+                {
+                    "name": "keyword.operator.scope.ldl",
+                    "match": "::"
+                },
+                {
+                    "name": "punctuation.separator.ldl",
+                    "match": "[,;]"
+                },
+                {
+                    "name": "punctuation.brackets.ldl",
+                    "match": "[\\[\\]\\(\\)\\{\\}]"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.ldl",
+                    "match": "\\b(fn|pipeline|flow|let|return|if|else|match|for|while|break|continue|using|macro|const|class|extends|static|self|super|init)\\b"
+                },
+                {
+                    "name": "storage.type.ldl",
+                    "match": "\\b(str|int|bool|float|void)\\b"
+                },
+                {
+                    "name": "storage.type.custom.ldl",
+                    "match": "\\b(Steps|Args|AnalysisSteps|ResearchMethod|DialecticalProcess|MaterialConditions|ClassAnalysis)\\b"
+                },
+                {
+                    "name": "constant.language.ldl",
+                    "match": "\\b(true|false|null|undefined)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.ldl",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.ldl",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.ldl",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.ldl",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "decorators": {
+            "patterns": [
+                {
+                    "name": "entity.name.tag.ldl",
+                    "match": "@\\w+"
+                }
+            ]
+        },
+        "classes": {
+            "patterns": [
+                {
+                    "name": "meta.class.definition.ldl",
+                    "match": "\\b(class)\\s+(\\w+)(?:\\s+(extends)\\s+(\\w+))?",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.ldl"
+                        },
+                        "2": {
+                            "name": "entity.name.class.ldl"
+                        },
+                        "3": {
+                            "name": "keyword.control.ldl"
+                        },
+                        "4": {
+                            "name": "entity.name.class.parent.ldl"
+                        }
+                    }
+                },
+                {
+                    "name": "entity.name.class.usage.ldl",
+                    "match": "\\b([A-Z][a-zA-Z0-9_]*)(?=\\s*[.:]|\\s*\\(|\\s*=|\\s|$)",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.type.class.ldl"
+                        }
+                    }
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.ldl",
+                    "match": "\\b(fn)\\s+(\\w+)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.ldl"
+                        },
+                        "2": {
+                            "name": "entity.name.function.ldl"
+                        }
+                    }
+                },
+                {
+                    "name": "entity.name.function.ldl",
+                    "match": "\\b(pipeline)\\s+(\\w+)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.ldl"
+                        },
+                        "2": {
+                            "name": "entity.name.function.ldl"
+                        }
+                    }
+                }
+            ]
+        },
+        "function_calls": {
+            "patterns": [
+                {
+                    "name": "meta.function-call.versioned.ldl",
+                    "begin": "\\b(\\w+)\\s*\\(",
+                    "end": "\\)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "entity.name.function.call.ldl"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#function_arguments"
+                        }
+                    ]
+                },
+                {
+                    "name": "entity.name.function.call.ldl",
+                    "match": "\\b(\\w+)(?=\\s*\\()",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.function.call.ldl"
+                        }
+                    }
+                }
+            ]
+        },
+        "function_arguments": {
+            "patterns": [
+                {
+                    "name": "meta.parameter.named.ldl",
+                    "match": "\\b(\\w+)\\s*(:)\\s*",
+                    "captures": {
+                        "1": {
+                            "name": "variable.parameter.name.ldl"
+                        },
+                        "2": {
+                            "name": "punctuation.separator.parameter.ldl"
+                        }
+                    }
+                },
+                {
+                    "name": "keyword.other.version.ldl",
+                    "match": "\\b(version)\\s*(:)\\s*",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.other.version.ldl"
+                        },
+                        "2": {
+                            "name": "punctuation.separator.parameter.ldl"
+                        }
+                    }
+                },
+                {
+                    "include": "#strings"
+                },
+                {
+                    "include": "#numbers"
+                },
+                {
+                    "include": "#keywords"
+                }
+            ]
+        },
+        "arrays": {
+            "patterns": [
+                {
+                    "name": "meta.array.ldl",
+                    "begin": "\\[",
+                    "end": "\\]",
+                    "patterns": [
+                        {
+                            "include": "#strings"
+                        },
+                        {
+                            "include": "#numbers"
+                        },
+                        {
+                            "include": "#function_calls"
+                        },
+                        {
+                            "name": "punctuation.separator.array.ldl",
+                            "match": ","
+                        }
+                    ]
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.definition.ldl",
+                    "match": "\\b(let)\\s+(\\w+)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.ldl"
+                        },
+                        "2": {
+                            "name": "variable.name.ldl"
+                        }
+                    }
+                },
+                {
+                    "name": "variable.parameter.ldl",
+                    "match": "\\b(\\w+)\\s*:",
+                    "captures": {
+                        "1": {
+                            "name": "variable.parameter.ldl"
+                        }
+                    }
+                },
+                {
+                    "name": "variable.other.ldl",
+                    "match": "\\b[a-z_][a-zA-Z0-9_]*\\b"
+                }
+            ]
+        },
+        "type_aliases": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.alias.ldl",
+                    "match": "\\b(using)\\s+(\\w+)\\s*=\\s*(\\w+)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.ldl"
+                        },
+                        "2": {
+                            "name": "entity.name.type.alias.ldl"
+                        },
+                        "3": {
+                            "name": "storage.type.ldl"
+                        }
+                    }
+                }
+            ]
+        },
+        "macros": {
+            "patterns": [
+                {
+                    "name": "entity.name.constant.macro.ldl",
+                    "match": "\\b(macro)\\s+(\\w+)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.ldl"
+                        },
+                        "2": {
+                            "name": "entity.name.constant.macro.ldl"
+                        }
+                    }
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "name": "entity.name.constant.ldl",
+                    "match": "\\b(const)\\s+(\\w+)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.ldl"
+                        },
+                        "2": {
+                            "name": "entity.name.constant.ldl"
+                        }
+                    }
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.ldl",
+                    "match": "\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        }
+    }
+}

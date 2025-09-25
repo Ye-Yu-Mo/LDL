@@ -1,0 +1,300 @@
+/// 马克思主义方法论 - 面向对象 Class 示例
+
+// ========== 马克思主义基础理论类型定义 ==========
+using AnalysisMethod = str
+using HistoricalStage = int
+using ClassPosition = str
+using RevolutionaryPotential = float
+
+macro DIALECTICAL_DEPTH 5
+macro MATERIAL_PRIORITY 1
+const CLASS_STRUGGLE_INTENSITY = 8.5
+const HISTORICAL_NECESSITY_THRESHOLD = 7.0
+
+/// 马克思主义分析基础类
+@label("marxism")
+@label("philosophy")
+class MarxistAnalysis {
+    // 类属性
+    let base_principle: str = "物质决定意识"
+    let analysis_depth: int = DIALECTICAL_DEPTH
+    let theoretical_foundation: str = "历史唯物主义"
+    
+    /// 构造方法
+    fn init(principle: str, depth: int) {
+        self.base_principle = principle
+        self.analysis_depth = depth
+    }
+    
+    /// 基础分析方法
+    fn analyze(target: str) -> AnalysisSteps {
+        let steps: AnalysisSteps = [
+            "识别研究对象",
+            "分析物质条件", 
+            "考察社会关系",
+            "把握发展规律"
+        ]
+        return steps
+    }
+    
+    /// 获取核心原则
+    static fn get_core_principles() -> Steps {
+        let principles = [
+            "物质决定意识",
+            "实践是检验真理的唯一标准",
+            "阶级斗争是历史发展的动力"
+        ]
+        return principles
+    }
+    
+    /// 评估分析有效性
+    fn evaluate_effectiveness(result: float) -> bool {
+        return result >= HISTORICAL_NECESSITY_THRESHOLD
+    }
+}
+
+/// 辩证唯物主义分析类 - 继承自马克思主义分析
+class DialecticalMaterialism extends MarxistAnalysis {
+    let contradiction_focus: str = "主要矛盾"
+    let dialectical_laws: Steps = ["对立统一", "量变质变", "否定之否定"]
+    
+    /// 重写基础分析方法
+    fn analyze(target: str) -> AnalysisSteps {
+        let dialectical_steps: AnalysisSteps = [
+            "观察现象表面",
+            "寻找内在矛盾",
+            "分析矛盾双方",
+            "把握矛盾运动",
+            "预测发展趋势"
+        ]
+        return dialectical_steps
+    }
+    
+    /// 矛盾分析专门方法
+    fn analyze_contradictions(phenomenon: str, depth: int) -> DialecticalProcess {
+        let contradiction_analysis: DialecticalProcess = [
+            "识别主要矛盾",
+            "分析次要矛盾", 
+            "确定矛盾主要方面",
+            "把握矛盾运动规律"
+        ]
+        return contradiction_analysis
+    }
+    
+    /// 静态方法：获取辩证法三大规律
+    static fn get_dialectical_laws() -> Steps {
+        let laws = [
+            "对立统一规律",
+            "量变质变规律", 
+            "否定之否定规律"
+        ]
+        return laws
+    }
+}
+
+/// 历史唯物主义分析类 - 继承自马克思主义分析
+class HistoricalMaterialism extends MarxistAnalysis {
+    let economic_base_focus: str = "生产力与生产关系"
+    let superstructure_elements: Steps = ["政治", "法律", "文化", "意识形态"]
+    
+    /// 重写分析方法 - 专注历史发展
+    fn analyze(target: str) -> AnalysisSteps {
+        let historical_steps: AnalysisSteps = [
+            "分析生产力水平",
+            "考察生产关系",
+            "研究经济基础",
+            "分析上层建筑",
+            "把握历史规律",
+            "预见社会发展"
+        ]
+        return historical_steps
+    }
+    
+    /// 社会形态分析
+    fn analyze_social_formation(stage: HistoricalStage) -> MaterialConditions {
+        let formation_analysis: MaterialConditions = [
+            "原始社会",
+            "奴隶社会", 
+            "封建社会",
+            "资本主义社会",
+            "社会主义社会",
+            "共产主义社会"
+        ]
+        return formation_analysis
+    }
+    
+    /// 静态方法：获取历史发展规律
+    static fn get_historical_laws() -> Steps {
+        let laws = [
+            "生产力决定生产关系",
+            "经济基础决定上层建筑",
+            "生产力与生产关系的矛盾运动推动社会发展"
+        ]
+        return laws
+    }
+}
+
+/// 阶级分析方法类 - 继承自马克思主义分析
+class ClassAnalysis extends MarxistAnalysis {
+    let class_categories: Steps = ["统治阶级", "被统治阶级", "中间阶级"]
+    let struggle_intensity: float = CLASS_STRUGGLE_INTENSITY
+    
+    /// 阶级成分分析
+    fn analyze_class_composition(society: str) -> ClassAnalysis {
+        let class_structure: ClassAnalysis = [
+            "确定生产资料占有关系",
+            "分析劳动分工地位",
+            "考察收入分配方式",
+            "研究政治权力归属",
+            "把握阶级利益矛盾"
+        ]
+        return class_structure
+    }
+    
+    /// 阶级斗争分析
+    fn analyze_class_struggle(period: HistoricalStage, intensity: float) -> DialecticalProcess {
+        let struggle_process: DialecticalProcess = [
+            "识别阶级矛盾",
+            "分析斗争形式",
+            "把握斗争发展",
+            "预测斗争结果"
+        ]
+        return struggle_process
+    }
+    
+    /// 静态方法：获取阶级分析原则
+    static fn get_class_analysis_principles() -> Steps {
+        let principles = [
+            "以经济地位为基础",
+            "以政治立场为标准",
+            "以实际行动为检验"
+        ]
+        return principles
+    }
+}
+
+/// 实践认识论类 - 继承自马克思主义分析
+class PracticeEpistemology extends MarxistAnalysis {
+    let practice_forms: Steps = ["生产实践", "阶级斗争实践", "科学实验实践"]
+    let cognition_levels: Steps = ["感性认识", "理性认识", "实践检验"]
+    
+    /// 实践认识循环分析
+    fn analyze_practice_cognition_cycle() -> AnalysisSteps {
+        let cycle_steps: AnalysisSteps = [
+            "实践探索",
+            "感性认识",
+            "理性思维",
+            "理论形成",
+            "指导实践",
+            "检验真理",
+            "发展认识"
+        ]
+        return cycle_steps
+    }
+    
+    /// 真理检验方法
+    fn verify_truth(theory: str, practice_result: float) -> bool {
+        return practice_result >= HISTORICAL_NECESSITY_THRESHOLD
+    }
+    
+    /// 静态方法：获取认识论原则
+    static fn get_epistemology_principles() -> Steps {
+        let principles = [
+            "实践是认识的来源",
+            "实践是认识的动力",
+            "实践是认识的目的",
+            "实践是检验真理的唯一标准"
+        ]
+        return principles
+    }
+}
+
+/// 马克思主义综合研究工厂类
+class MarxistResearchFactory {
+    /// 创建辩证唯物主义分析器
+    static fn create_dialectical_analyzer() -> DialecticalMaterialism {
+        let analyzer = DialecticalMaterialism()
+        analyzer.init("物质运动规律", DIALECTICAL_DEPTH)
+        return analyzer
+    }
+    
+    /// 创建历史唯物主义分析器
+    static fn create_historical_analyzer() -> HistoricalMaterialism {
+        let analyzer = HistoricalMaterialism()
+        analyzer.init("社会发展规律", 6)
+        return analyzer
+    }
+    
+    /// 创建阶级分析器
+    static fn create_class_analyzer() -> ClassAnalysis {
+        let analyzer = ClassAnalysis()
+        analyzer.init("阶级斗争规律", 4)
+        return analyzer
+    }
+    
+    /// 创建实践认识论分析器
+    static fn create_practice_analyzer() -> PracticeEpistemology {
+        let analyzer = PracticeEpistemology()
+        analyzer.init("实践认识规律", 5)
+        return analyzer
+    }
+}
+
+/// 测试类的使用和方法跳转
+fn test_marxist_classes() {
+    // 1. 测试类实例化和方法调用跳转
+    let dialectical = DialecticalMaterialism()
+    let historical = HistoricalMaterialism()
+    let class_analyzer = ClassAnalysis()
+    let practice_analyzer = PracticeEpistemology()
+    
+    // 2. 测试实例方法调用跳转
+    let dialectical_result = dialectical.analyze("资本主义矛盾")          // 应跳转到 DialecticalMaterialism.analyze
+    let contradiction_analysis = dialectical.analyze_contradictions("阶级矛盾", 5)  // 应跳转到方法定义
+    
+    let historical_result = historical.analyze("封建社会向资本主义过渡")    // 应跳转到 HistoricalMaterialism.analyze
+    let social_formation = historical.analyze_social_formation(4)          // 应跳转到方法定义
+    
+    let class_composition = class_analyzer.analyze_class_composition("现代社会")     // 应跳转到方法定义
+    let class_struggle = class_analyzer.analyze_class_struggle(5, 8.0)             // 应跳转到方法定义
+    
+    let practice_cycle = practice_analyzer.analyze_practice_cognition_cycle()       // 应跳转到方法定义
+    let truth_verification = practice_analyzer.verify_truth("马克思主义", 9.0)      // 应跳转到方法定义
+    
+    // 3. 测试静态方法调用跳转
+    let core_principles = MarxistAnalysis.get_core_principles()           // 应跳转到静态方法定义
+    let dialectical_laws = DialecticalMaterialism.get_dialectical_laws()  // 应跳转到静态方法定义
+    let historical_laws = HistoricalMaterialism.get_historical_laws()     // 应跳转到静态方法定义
+    let class_principles = ClassAnalysis.get_class_analysis_principles()  // 应跳转到静态方法定义
+    let practice_principles = PracticeEpistemology.get_epistemology_principles()  // 应跳转到静态方法定义
+    
+    // 4. 测试工厂方法跳转
+    let factory_dialectical = MarxistResearchFactory.create_dialectical_analyzer()  // 应跳转到工厂方法
+    let factory_historical = MarxistResearchFactory.create_historical_analyzer()   // 应跳转到工厂方法
+    let factory_class = MarxistResearchFactory.create_class_analyzer()             // 应跳转到工厂方法
+    let factory_practice = MarxistResearchFactory.create_practice_analyzer()       // 应跳转到工厂方法
+    
+    // 5. 测试类名跳转（在类型注解中）
+    let analyzer1: DialecticalMaterialism = factory_dialectical     // DialecticalMaterialism 应跳转到类定义
+    let analyzer2: HistoricalMaterialism = factory_historical       // HistoricalMaterialism 应跳转到类定义
+    let analyzer3: ClassAnalysis = factory_class                    // ClassAnalysis 应跳转到类定义
+    let analyzer4: PracticeEpistemology = factory_practice          // PracticeEpistemology 应跳转到类定义
+}
+
+/// 综合马克思主义分析 Pipeline - 使用类的组合
+pipeline comprehensive_marxist_class_analysis {
+    // 使用工厂创建分析器
+    let dialectical_analyzer = MarxistResearchFactory.create_dialectical_analyzer()
+    let historical_analyzer = MarxistResearchFactory.create_historical_analyzer()
+    let class_analyzer = MarxistResearchFactory.create_class_analyzer()
+    let practice_analyzer = MarxistResearchFactory.create_practice_analyzer()
+    
+    // 执行综合分析
+    let dialectical_analysis = dialectical_analyzer.analyze("现代资本主义")
+    let historical_analysis = historical_analyzer.analyze("社会主义建设")
+    let class_analysis = class_analyzer.analyze_class_composition("当代中国")
+    let practice_analysis = practice_analyzer.analyze_practice_cognition_cycle()
+    
+    // 测试综合应用
+    test_marxist_classes()
+}

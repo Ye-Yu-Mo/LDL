@@ -1,0 +1,140 @@
+// ========== 马克思主义方法论类型定义 ==========
+using AnalysisSteps = Steps
+using ResearchMethod = str
+using DialecticalProcess = Steps
+using MaterialConditions = str
+using ClassAnalysis = Steps
+
+macro CONTRADICTION_ANALYSIS_DEPTH 5
+macro HISTORICAL_PERSPECTIVE_YEARS 100
+const MATERIAL_BASE_PRIORITY = 1
+const CONSCIOUSNESS_REFLECTION_PRIORITY = 2
+
+/// 辩证唯物主义分析方法
+@label("philosophy")
+@label("dialectical_materialism")
+fn dialectical_materialism(target: str = "social_phenomenon", depth: int = 3) -> AnalysisSteps {
+    // 辩证唯物主义的基本步骤 - 使用具体的函数调用
+    observe_surface_phenomena(target)
+    identify_internal_contradictions(depth: depth)
+    analyze_contradiction_movement()
+    grasp_development_laws(context: "material_base")
+    predict_development_trends(timespan: HISTORICAL_PERSPECTIVE_YEARS)
+
+    let contradiction_depth = CONTRADICTION_ANALYSIS_DEPTH  // 使用宏
+    let material_priority = MATERIAL_BASE_PRIORITY          // 使用常量
+
+    return build_analysis_result()
+}
+
+/// 历史唯物主义分析版本
+fn dialectical_materialism(version: "historical") -> AnalysisSteps {
+    // 历史唯物主义具体分析步骤
+    analyze_productive_forces(level: "current")
+    examine_production_relations(mode: "capitalist")
+    study_superstructure(components: ["political", "ideological"])
+    grasp_historical_laws(scope: "social_development")
+    foresee_social_development(period: HISTORICAL_PERSPECTIVE_YEARS)
+
+    let historical_span = HISTORICAL_PERSPECTIVE_YEARS  // 使用宏
+    return synthesize_historical_analysis()
+}
+
+/// 阶级分析方法
+@label("class_analysis")
+@label("marxism")
+fn class_analysis() -> ClassAnalysis {
+    // 阶级分析具体操作步骤
+    identify_class_composition(criteria: "economic_base")
+    analyze_class_interests(scope: ["material", "political"])
+    examine_class_relations(dynamics: "antagonistic")
+    study_class_struggle(intensity: "high", forms: ["economic", "political", "ideological"])
+    grasp_class_trends(direction: "polarization")
+    guide_practical_action(strategy: "revolutionary")
+
+    return compile_class_analysis()
+}
+
+/// 实践认识论方法
+@label("epistemology")
+@label("practice")
+fn practice_cognition() -> AnalysisSteps {
+    // 实践→认识→再实践→再认识的循环
+    engage_practical_exploration(domain: "social_reality")
+    form_perceptual_knowledge(source: "direct_experience")
+    conduct_rational_thinking(method: "abstraction")
+    develop_theoretical_framework(basis: "empirical_data")
+    guide_practice_with_theory(application: "concrete_situation")
+    verify_truth_through_practice(criteria: "objective_results")
+
+
+    return complete_cognition_cycle()
+}
+
+/// 马克思主义综合分析流程
+pipeline marxist_analysis {
+    dialectical_materialism(version="historical")  // 跳转到历史唯物主义版本
+    class_analysis()                               // 跳转到阶级分析方法
+    practice_cognition()                           // 跳转到实践认识论方法
+}
+
+/// 马克思主义方法应用示例
+fn apply_marxist_analysis(target: str, complexity: int = 1) -> ResearchMethod {
+    let selected_method: ResearchMethod = ""
+    let analysis_depth = 0
+    
+    if target == "social_issue" {
+        let dialectical_steps = dialectical_materialism(version="historical")  // 函数调用高亮测试
+        selected_method = "historical_materialism"
+        analysis_depth = HISTORICAL_PERSPECTIVE_YEARS
+    } else {
+        let basic_steps = dialectical_materialism()                            // 默认版本调用
+        selected_method = "dialectical_materialism"
+        analysis_depth = CONTRADICTION_ANALYSIS_DEPTH
+    }
+    
+    // 组合使用其他马克思主义方法
+    let class_method = class_analysis()
+    let practice_method = practice_cognition()
+    
+    return selected_method
+}
+
+/// 矛盾分析具体方法
+fn contradiction_analysis(phenomenon: str, depth: int = 3) -> DialecticalProcess {
+    let analysis_depth = depth
+    let contradiction_types = ["主要矛盾", "次要矛盾", "矛盾主要方面", "矛盾次要方面"]
+    
+    let steps: DialecticalProcess = [
+        "识别矛盾现象",
+        "区分主次矛盾",
+        "分析矛盾双方",
+        "把握矛盾运动",
+        "寻找解决途径"
+    ]
+    return steps
+}
+
+/// 马克思主义综合研究流程
+@label("comprehensive")
+@label("marxist_research")
+pipeline comprehensive_marxist_research {
+    // 调用各种马克思主义方法 - 测试函数调用高亮
+    let dialectical_result = dialectical_materialism(target="capitalism", depth=CONTRADICTION_ANALYSIS_DEPTH)
+    let class_result = class_analysis()
+    let practice_result = practice_cognition()
+    let contradiction_result = contradiction_analysis(phenomenon="social_inequality", depth=5)
+    
+    // 应用综合分析
+    apply_marxist_analysis(target="economic_crisis", complexity=3)
+}
+
+/// 马克思主义方法评估函数
+fn evaluate_marxist_method(method_name: ResearchMethod, theoretical_depth: int, practical_effect: float) -> bool {
+    let min_theoretical_score = MATERIAL_BASE_PRIORITY
+    let min_practical_score = 7.0
+    let theoretical_adequacy = theoretical_depth >= min_theoretical_score
+    let practical_effectiveness = practical_effect >= min_practical_score
+    
+    return theoretical_adequacy && practical_effectiveness
+}
