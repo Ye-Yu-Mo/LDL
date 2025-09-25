@@ -1,0 +1,77 @@
+/// 引用查找测试文件
+/// 用于测试跳转到定义和查找所有引用功能
+
+/// 基础学习方法
+@label("learning")
+@label("basic")
+fn study_method(topic: str, duration: int = 30) -> Steps {
+    let preparation = [
+        "准备学习材料",
+        "设置学习环境"
+    ]
+    return preparation
+}
+
+/// 高级学习方法
+@label("learning")
+@label("advanced")
+fn advanced_study(subject: str) -> Steps {
+    // 调用基础方法 - 这里应该能找到study_method的引用
+    let basic_steps = study_method(subject, 60)
+
+    let advanced_steps = [
+        "深入分析",
+        "实践应用",
+        "总结反思"
+    ]
+
+    return basic_steps + advanced_steps
+}
+
+/// 学习流程
+pipeline learning_workflow {
+    // 这里也调用了study_method - 应该能找到引用
+    study_method("mathematics", 45)
+    advanced_study("calculus")
+}
+
+/// 复习方法
+@label("review")
+fn review_session(topic: str) -> Steps {
+    // 再次调用study_method - 第三个引用点
+    let study_steps = study_method(topic, 20)
+
+    let review_steps = [
+        "回顾笔记",
+        "做练习题",
+        "总结要点"
+    ]
+
+    return study_steps + review_steps
+}
+
+/// 测试类中的方法引用
+@label("education")
+class StudyPlan {
+    fn create_plan(subject: str, weeks: int) -> Plan {
+        // 在类方法中调用study_method - 第四个引用点
+        let daily_routine = study_method(subject, 90)
+
+        return Plan {
+            subject: subject,
+            duration_weeks: weeks,
+            daily_steps: daily_routine
+        }
+    }
+
+    fn get_advanced_plan(subject: str) -> Plan {
+        // 调用advanced_study方法
+        let steps = advanced_study(subject)
+
+        return Plan {
+            subject: subject,
+            duration_weeks: 12,
+            daily_steps: steps
+        }
+    }
+}

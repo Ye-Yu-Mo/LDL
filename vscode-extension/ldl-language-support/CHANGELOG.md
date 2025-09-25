@@ -2,6 +2,21 @@
 
 All notable changes to the "ldl-language-support" extension will be documented in this file.
 
+## [1.2.0] - 2024-09-25
+
+### Added
+- Reference Provider for finding all symbol references
+- "Find All References" functionality (Shift+F12)
+- Comprehensive reference detection across files
+- Support for function calls, variable usage, and type references
+- Smart filtering to exclude comments and string literals
+- Test file for reference functionality validation
+
+### Enhanced
+- Complete bidirectional navigation: Go to Definition + Find References
+- Better symbol recognition in different contexts
+- Cross-file reference detection with caching for performance
+
 ## [1.1.0] - 2024-09-25
 
 ### Added

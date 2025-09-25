@@ -2,7 +2,7 @@
   "name": "ldl-language-support",
   "displayName": "LDL Learning Domain Language",
   "description": "Intelligent language support for LDL (Learning Domain Language) with AI-powered completion, error detection, and code generation",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "publisher": "jasxu",
   "author": {
     "name": "Ye-Yu-Mo",

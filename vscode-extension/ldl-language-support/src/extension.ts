@@ -3,6 +3,7 @@ import { LDLDefinitionProvider } from './definitionProvider';
 import { LDLDocumentSymbolProvider } from './documentSymbolProvider';
 import { LDLWorkspaceSymbolProvider } from './workspaceSymbolProvider';
 import { LDLCompletionProvider } from './completionProvider';
+import { LDLReferenceProvider } from './referenceProvider';
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('LDL Language Support is now active!');
@@ -33,11 +34,18 @@ export function activate(context: vscode.ExtensionContext) {
         '(', '"', "'", '@', '.', ':'  // 触发字符
     );
 
+    // 注册引用提供器 (Shift+F12 - 查找所有引用)
+    const referenceProvider = vscode.languages.registerReferenceProvider(
+        documentSelector,
+        new LDLReferenceProvider()
+    );
+
     context.subscriptions.push(
         definitionProvider,
         documentSymbolProvider,
         workspaceSymbolProvider,
-        completionProvider
+        completionProvider,
+        referenceProvider
     );
 }
 
